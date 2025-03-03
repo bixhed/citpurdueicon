@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIT Animated Ad</title>
+    <style>
+        /* Full-page container for better background control */
+        .background-container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('backgroundr.jpg'); /* Replace with actual image */
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #ddd; /* Fallback color */
+        }
+
+        /* Small ad container */
+        .ad-container {
+            width: 400px;
+            height: 250px;
+            background-image: url('3dmap.jpg'); /* Replace with actual image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border: 3px solid black;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Animated text */
+        .moving-text {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px 20px;
+            border-radius: 5px;
+            position: absolute;
+            animation: moveText 4s infinite alternate ease-in-out;
+        }
+
+        /* Moving CIT Icon */
+        .cit-icon {
+            width: 50px; /* Adjust as needed */
+            height: 50px; /* Adjust as needed */
+            position: absolute;
+            right: 10px; /* Move to the right side */
+            animation: moveText 4s infinite alternate ease-in-out;
+        }
+
+        /* Animation */
+        @keyframes moveText {
+            0% { transform: translateY(-10px); }
+            100% { transform: translateY(10px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-container">
+        <div class="ad-container">
+            <img src="citicon.png" alt="CIT Icon" class="cit-icon"> <!-- Replace with actual icon -->
+            <div class="moving-text">Join CIT at IUPUI!</div>
+        </div>
+    </div>
+
+</body>
+</html>
